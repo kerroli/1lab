@@ -45,11 +45,7 @@ int task3() {
     std::cout << "Third task, insert n, l, m, k:\n";
     std::cin >> n >> l >> m >> k;
     answ = (n&&l||(m^!k));
-    if (answ == 1) {
-        std::cout << "Answer: True" << std::endl;
-    } else {
-        std::cout << "Answer: False" << std::endl;
-    }
+    std::cout<< "Answer: "<< std::boolalpha << answ  << std::endl;
     return 0;
 }
 // 4
@@ -73,7 +69,7 @@ int task5() {
     unsigned short int answ;
     std::cout << "Fifth task, insert c, d, e, f:\n";
     std::cin >> d >> c >> e >> f;
-    answ=((!d|c)&e^f);
+    answ=((~d|c)&e^f);
     std::cout << "Answer: ";
     std::cout << std::hex << std::setw(6) << std::setfill('0') << std::showbase << std::internal << answ << std::endl;
     return 0;
